@@ -1,0 +1,59 @@
+Documentation for the Program
+Overview:
+The provided Python program is a command-line tool for managing and operating on graphs. It allows users to perform various operations on graphs such as printing vertices, finding edges, modifying edge costs, deleting vertices/edges, and more. The program consists of four main modules:
+
+REPOSITORY.py: This module handles the data storage and retrieval for the graph, including reading from/writing to a file.
+
+FUNCTIONS.py: Contains the core functionalities related to graph operations such as printing vertices, finding edges, modifying costs, and generating random graphs.
+
+MENU.py: Provides the user interface for interacting with the graph functionalities. It presents a menu-driven interface where users can choose operations to perform on the graph.
+
+STARTER.py: This is the entry point of the program. It initializes the repository, functions, and menu, and starts the application.
+
+Modules:
+REPOSITORY.py:
+Class Repository:
+Manages the storage of graph data including vertices, edges, and edge costs.
+Methods:
+__init__(self, file_name: str): Initializes the repository with empty data structures and sets the file name for I/O operations.
+get_a_graph_from_file(self): Reads graph data from a file and populates the repository.
+put_a_graph_in_a_file(self): Writes graph data from the repository to a file.
+FUNCTIONS.py:
+Class Functions:
+Contains functions to perform various operations on the graph.
+Methods:
+__init__(self, repository): Initializes the Functions object with a repository instance.
+Various methods for operations like printing vertices, finding edges, modifying costs, deleting vertices/edges, and generating random graphs.
+MENU.py:
+Class Menu:
+Provides a menu-driven interface for users to interact with graph functionalities.
+Methods:
+__init__(self, repository, functions): Initializes the menu with a repository and functions instance.
+verify_if_we_have_a_graph(self): Checks if the graph exists in the repository.
+ShowMenu(self): Displays the menu options and handles user input for executing operations on the graph.
+STARTER.py:
+Function start():
+Initializes the repository, functions, and menu objects.
+Calls the ShowMenu() method of the Menu class to start the application.
+Test Functions (test_functions.py):
+To ensure the correctness of non-UI functions, test functions are implemented. These functions will directly test the functionalities of the Functions class methods in FUNCTIONS.py. Here's a breakdown of test functions for each method:
+
+test_print_the_number_of_vertices: Tests the print_the_number_of_vertices() method to ensure it returns the correct number of vertices.
+
+test_print_all_vertices: Tests the print_all_vertices() method to verify if it correctly returns all vertices.
+
+test_find_an_edge_between_two_vertices: Tests the find_an_edge_between_two_vertices() method to verify its accuracy in identifying edges between two vertices.
+
+test_find_the_in_degree_and_the_out_degree_of_a_specified_vertex: Tests the find_the_in_degree_and_the_out_degree_of_a_specified_vertex() method to ensure it correctly calculates the in-degree and out-degree of a specified vertex.
+
+test_print_all_out_edges_for_a_specified_vertex: Tests the print_all_out_edges_for_a_specified_vertex() method to verify if it returns all out-edges for a specified vertex.
+
+test_print_all_in_edges_for_a_specified_vertex: Tests the print_all_in_edges_for_a_specified_vertex() method to ensure it returns all in-edges for a specified vertex.
+
+test_modify_the_cost_of_the_edge: Tests the modify_the_cost_of_the_edge() method to verify if it correctly modifies the cost of an edge between two vertices.
+
+test_delete_a_specified_vertex: Tests the delete_a_specified_vertex() method to ensure it correctly deletes a specified vertex from the graph.
+
+test_delete_a_specified_edge: Tests the delete_a_specified_edge() method to verify if it correctly deletes a specified edge from the graph.
+
+test_random_graph: Tests the random_graph() method to ensure it generates a random graph with the specified number of vertices and edges.
