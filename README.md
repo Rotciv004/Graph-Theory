@@ -1,2 +1,2 @@
 # Graph-Theory
-Here I have a program written in Python that includes several algorithms that handle graphs
+Python implementations of fundamental graph algorithms, including Dijkstra, BFS, DFS, Bellman-Ford, Floyd-Warshall, Prim, Kruskal, and more. Ideal for learning and exploring graph-based problem-solving.
